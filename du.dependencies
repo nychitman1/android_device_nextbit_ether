@@ -1,0 +1,18 @@
+[
+  {
+    "repository": "android_kernel_nextbit_msm8992",
+    "target_path": "kernel/nextbit/msm8992"
+  },
+  {
+    "repository": "android_vendor_nextbit",
+    "target_path": "vendor/nextbit"
+  },
+  {
+    "repository": "android_external_libnetfilter_conntrack",
+    "target_path": "external/libnetfilter_conntrack"
+  },
+  {
+    "repository": "android_external_libnfnetlink",
+    "target_path": "external/libnfnetlink"
+  }
+]

@@ -1,5 +1,5 @@
-PRODUCT_PACKAGES += \
-    Snap
+#PRODUCT_PACKAGES += \
+#    Snap
 
 # Camera2 API
 PRODUCT_PROPERTY_OVERRIDES += \

@@ -1,21 +1,18 @@
-# Boot animation
-TARGET_SCREEN_HEIGHT := 1080
-TARGET_SCREEN_WIDTH := 1920
-
 # Inherit 64-bit configs
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+# Inherit some common DU stuff.
+$(call inherit-product, vendor/du/config/common_full_phone.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/nextbit/ether/device.mk)
+$(call inherit-product, vendor/du/config/nfc_enhanced.mk)
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_NAME := cm_ether
+PRODUCT_NAME := du_ether
 BOARD_VENDOR := nextbit
 TARGET_VENDOR := nextbit
 PRODUCT_DEVICE := ether
