@@ -162,6 +162,7 @@ external/ant-wireless/antradio-library/com.dsi.ant.antradio_library.xml:system/e
 
 # Camera2 API
 PRODUCT_PROPERTY_OVERRIDES += \
+    media.camera.ts.monotonic=0 \
     persist.camera.HAL3.enabled=1
 
 PRODUCT_COPY_FILES += \
