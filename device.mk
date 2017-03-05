@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2016 The CyanogenMod Project
+# Copyright (C) 2015-2017 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -253,7 +253,7 @@ PRODUCT_PACKAGES += \
     liboverlay \
     libqdutils \
     libqdMetaData \
-    memtrack.msm8992 \
+    memtrack.msm8992
 
 # QC CABL feature
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -425,5 +425,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PACKAGES += \
     power.ether
-
-PRODUCT_PACKAGES += RobinParts
