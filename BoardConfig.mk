@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2016 The CyanogenMod Project
+# Copyright (C) 2015-2017 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -32,6 +32,7 @@ TARGET_ARCH_VARIANT := armv8-a
 TARGET_CPU_ABI := arm64-v8a
 TARGET_CPU_ABI2 :=
 TARGET_CPU_VARIANT := cortex-a53
+TARGET_USE_QCOM_BIONIC_OPTIMIZATION := true
 
 # Second architecture
 TARGET_2ND_ARCH := arm
@@ -60,10 +61,9 @@ BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 BOARD_RAMDISK_OFFSET     := 0x01000000
 
 TARGET_KERNEL_SOURCE := kernel/nextbit/msm8992
-TARGET_KERNEL_CONFIG := omni_ether_defconfig
+TARGET_KERNEL_CONFIG := ether_defconfig
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
-TARGET_KERNEL_ARCH := arm64
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 boot_cpus=0-5
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 
@@ -123,7 +123,6 @@ USE_OPENGL_RENDERER := true
 
 # Encryption
 TARGET_HW_DISK_ENCRYPTION := true
-TARGET_CRYPTFS_HW_PATH := $(DEVICE_PATH)/cryptfs_hw
 
 # Keymaster
 TARGET_PROVIDES_KEYMASTER := true
@@ -131,16 +130,14 @@ TARGET_KEYMASTER_WAIT_FOR_QSEE := true
 
 # QCOM Platform
 BOARD_USES_QCOM_HARDWARE := true
-TARGET_USES_QCOM_BSP := true
+#TARGET_USES_QCOM_BSP := true
 
 BOARD_HAS_SENSORS_GROUP := true
 
-TARGET_QCOM_DISPLAY_VARIANT := caf-msm8992
-TARGET_QCOM_AUDIO_VARIANT := caf-msm8992
-TARGET_QCOM_MEDIA_VARIANT := caf-msm8992
-TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
-
-#TARGET_RIL_VARIANT := caf
+#TARGET_QCOM_DISPLAY_VARIANT := caf-msm8992
+#TARGET_QCOM_AUDIO_VARIANT := caf-msm8992
+#TARGET_QCOM_MEDIA_VARIANT := caf-msm8992
+#TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
 
 BOARD_USES_QC_TIME_SERVICES := true
 
@@ -180,13 +177,13 @@ WPA_SUPPLICANT_VERSION           := VER_0_8_X
 BOARD_USES_WIPOWER := true
 
 # TWRP
-TW_THEME := portrait_hdpi
-TW_INCLUDE_CRYPTO := true
+#TW_THEME := portrait_hdpi
+#TW_INCLUDE_CRYPTO := true
 BOARD_SUPPRESS_SECURE_ERASE := true
-RECOVERY_SDCARD_ON_DATA := true
-BOARD_HAS_NO_REAL_SDCARD := true
-BOARD_HAS_NO_SELECT_BUTTON := true
-TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
+#RECOVERY_SDCARD_ON_DATA := true
+#BOARD_HAS_NO_REAL_SDCARD := true
+#BOARD_HAS_NO_SELECT_BUTTON := true
+#TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 
 TARGET_PROVIDES_POWERHAL := true
 TARGET_USES_INTERACTION_BOOST := true
